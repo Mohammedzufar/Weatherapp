@@ -1,0 +1,71 @@
+/* Forecast - Glassmorphism card */
+.forecast {
+  padding: 2rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.forecast-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.forecast-item {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--glass-bg);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  transition: transform 0.2s ease;
+}
+
+.forecast-item:hover {
+  transform: translateX(4px);
+}
+
+.forecast-date {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.forecast-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.forecast-temp {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .forecast-item {
+    grid-template-columns: 1fr 40px 1fr;
+  }
+  .forecast-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
